@@ -14,11 +14,12 @@
 
     <h2>2 - Saída - document.write()</h2>
     <p>Escrever texto na página</p>
-    <button onclick = "minhaFuncao()">Clique aqui!</button>
+    <button onclick="mostrar()">Clique aqui!</button>
+    
     <br>
     <h2>3 - Entrada - prompt()</h2>
     <p>Pede uma informação do usuário</p>
-    <button onclick="pergunta()">Clique aqui!</button>
+    <button onclick="solicitarDados()">Clique aqui!</button>
     <div id="res1" class="resultado"></div>
     <br>
     <h2>4 - Entrada - input HTML</h2>
@@ -40,6 +41,54 @@
     <input type="number" id="nt3" placeholder="Nota 3">
     <button onclick="calcularMedia()">Calcular Média</button>
     <div id="res4" class="resultado"></div> 
+    <br>
+    <h2>7 - Conversão de Dólar</h2>
+    <input type="number" id="dolar" placeholder="Valor em Dólar">
+    <button onclick="converterDolar()">Converter</button>
+    <div id="res5" class="resultado"></div>
+    <br>
+    <h2>8 - Cálculo de Área</h2>
+    <input type="number" id="base" placeholder="Base">
+    <input type="number" id="altura" placeholder="Altura">
+    <button onclick="calcularArea()">Calcular Área</button>
+    <div id="res6" class="resultado"></div>
+    <br>
+    <h2>9 - Antecessor e Sucessor</h2>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="calcularAntecessorSucessor()">Calcular</button>
+    <div id="res7" class="resultado"></div>
+    <br>
+    <h2>10 - Par ou Ímpar</h2>
+    <input type="number" id="numParImpar" placeholder="Digite um número">
+    <button onclick="verificarParImpar()">Verificar</button>
+    <div id="res8" class="resultado"></div>
+    <br>
+    <h2>11 - Radar de Velocidade</h2>
+    <input type="number" id="velocidade" placeholder="Velocidade do veículo">
+    <button onclick="verificarVelocidade()">Verificar</button>
+    <div id="res9" class="resultado"></div>
+    <br>
+    <h2>12 - Maior de Idade (Habilitação)</h2>
+    <input type="number" id="idade" placeholder="Digite sua idade">
+    <button onclick="verificarMaioridade()">Verificar</button>
+    <div id="res10" class="resultado"></div>
+    <br>
+    <h2>13 - Calculadora de IMC</h2>
+    <input type="number" step="0.1" id="peso" placeholder="Peso (kg)">
+    <input type="number" step="0.1" id="alturaIMC" placeholder="Altura (m)">
+    <button onclick="calcularIMC()">Calcular IMC</button>
+    <div id="res11" class="resultado"></div>
+    <br>
+    <h2>14 - Simulador de Desconto Progressivo</h2>
+    <input type="number" step="0.01" id="valorProduto" placeholder="Valor do Produto">
+    <button onclick="calcularDesconto()">Calcular Desconto</button>
+    <div id="res12" class="resultado"></div>
+    <br>
+    <h2>15 - Comparador de Números (Qual é o maior?)</h2>
+    <input type="number" id="numA" placeholder="Número A">
+    <input type="number" id="numB" placeholder="Número B">
+    <button onclick="compararNumeros()">Comparar</button>
+    <div id="res13" class="resultado"></div>
     <br>
     <script src="./js/script.js"></script>
 </body>
