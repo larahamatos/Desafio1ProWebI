@@ -175,3 +175,218 @@ function compararNumeros() {
         }
         document.getElementById("res13").innerHTML = resultado;
     }
+//16 
+function classificarTriangulo() {
+    let ladoA = parseFloat(document.getElementById("ladoA").value);
+    let ladoB = parseFloat(document.getElementById("ladoB").value);
+    let ladoC = parseFloat(document.getElementById("ladoC").value);
+
+    if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC)) {
+        alert("Por favor, digite números válidos!");
+        return;
+    }   
+    let resultado = "";
+
+    if (ladoA === ladoB && ladoB === ladoC) {
+        resultado = "O triângulo é Equilátero.";
+    } else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+        resultado = "O triângulo é Isósceles.";
+    } else {
+        resultado = "O triângulo é Escaleno.";
+    }
+    document.getElementById("res14").innerHTML = resultado;
+}
+//17
+function selecionarBebida() {
+    let bebida = document.getElementById("bebida").value;
+    let resultado = "";
+    switch (bebida) {
+        case "agua":
+            resultado = "Você escolheu Água.";
+            break;
+        case "refrigerante":
+            resultado = "Você escolheu Refrigerante.";
+            break;
+        case "suco":
+            resultado = "Você escolheu Suco.";
+            break;
+        default:
+            resultado = "Opção inválida.";
+    }
+    document.getElementById("res15").innerHTML = resultado;
+}
+//18
+function verificarVogalConsoante() {
+    let letra = document.getElementById("letra").value.toLowerCase();
+    let resultado = "";
+    if (letra.length !== 1 || !/[a-z]/.test(letra)) {
+        alert("Por favor, digite uma letra válida!");
+        return;
+    }
+    if ("aeiou".includes(letra)) {
+        resultado = "A letra '" + letra + "' é uma vogal.";
+    } else {
+        resultado = "A letra '" + letra + "' é uma consoante.";
+    }
+    document.getElementById("res16").innerHTML = resultado;
+}
+//19 
+function calculadoraSimples() {
+    let num1 = parseFloat(document.getElementById("calcNum1").value);
+    let num2 = parseFloat(document.getElementById("calcNum2").value);
+    let operacao = document.getElementById("operacao").value;
+    let resultado = 0;
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor, digite números válidos!");
+        return;
+
+        resultado = " ";
+    }
+    switch (operacao) {
+        case "somar":
+            resultado = num1 + num2;
+            break;
+        case "subtrair":
+            resultado = num1 - num2;
+            break;
+        case "multiplicar":
+            resultado = num1 * num2;
+            break;
+        case "dividir":
+            if (num2 === 0) {
+                alert("Divisão por zero não é permitida!");
+                return;
+            }
+            resultado = num1 / num2;
+            break;
+        default:
+            alert("Operação inválida!");
+            return;
+    }
+    document.getElementById("res17").innerHTML = resultado;
+}
+//20
+function conversorMoedas() {
+    let valor = parseFloat(document.getElementById("valorReal").value);
+    let moeda = document.getElementById("moedaDestino").value;
+    let resultado = 0;
+
+    let dolar = 4.93;
+    let euro = 5.77;
+    let peso = 0.0035;
+
+    if (isNaN(valor) || valor <= 0) {
+        document.getElementById("res18").innerHTML = "Digite um valor válido!";
+        return;
+    }
+
+    switch (moeda) {
+        case "dolar":
+            resultado = valor / dolar;
+            document.getElementById("res18").innerHTML =
+                "Valor em dólar: $" + resultado.toFixed(2);
+            break;
+
+        case "euro":
+            resultado = valor / euro;
+            document.getElementById("res18").innerHTML =
+                "Valor em euro: €" + resultado.toFixed(2);
+            break;
+
+        case "peso":
+            resultado = valor / peso;
+            document.getElementById("res18").innerHTML =
+                "Valor em peso argentino: $" + resultado.toFixed(2);
+            break;
+
+        default:
+            document.getElementById("res18").innerHTML = "Moeda inválida!";
+    }
+}
+//21 
+function contagemProgressiva() {
+    let inicio = parseInt(document.getElementById("contagemInicio").value);
+    let fim = parseInt(document.getElementById("contagemFim").value);
+    let resultado = "";
+
+    if (isNaN(inicio) || isNaN(fim)) {
+        document.getElementById("res19").innerHTML = "Digite valores válidos!";
+        return;
+    }
+
+    if (inicio > fim) {
+        document.getElementById("res19").innerHTML = "O início deve ser menor que o fim!";
+        return;
+    }
+
+    for (let i = inicio; i <= fim; i++) {
+        resultado += i + " ";
+    }
+
+    document.getElementById("res19").innerHTML = resultado;
+}
+//22
+function gerarTabuada() {
+    let numero = parseInt(document.getElementById("tabuadaNumero").value);
+    let resultado = "";
+    if (isNaN(numero)) {
+        document.getElementById("res20").innerHTML = "Digite um número válido!";
+        return;
+    }
+    for (let i = 1; i <= 10; i++) {
+        resultado += numero + " x " + i + " = " + (numero * i) + "<br>";
+    }
+    document.getElementById("res20").innerHTML = resultado;
+}
+//23 
+function somarCinco() {
+    let n1 = parseFloat(document.getElementById("n1").value);
+    let n2 = parseFloat(document.getElementById("n2").value);
+    let n3 = parseFloat(document.getElementById("n3").value);
+    let n4 = parseFloat(document.getElementById("n4").value);
+    let n5 = parseFloat(document.getElementById("n5").value);
+
+    if (isNaN(n1) || isNaN(n2) || isNaN(n3) || isNaN(n4) || isNaN(n5)) {
+        document.getElementById("resultado").innerHTML = "Preencha todos os números!";
+        return;
+    }
+
+    let soma = n1 + n2 + n3 + n4 + n5;
+
+    document.getElementById("resultado").innerHTML = "Soma total: " + soma;
+}
+//24
+function apenasPares() {
+    let resultado = "";
+
+    for (let i = 2; i <= 100; i += 2) {
+        resultado += i + " ";
+    }
+
+    document.getElementById("res22").innerHTML = resultado;
+}
+//25
+function calcularFatorial() {
+    let num = parseInt(document.getElementById("numFatorial").value);
+    let resultado = 1;
+    let conta = "";
+
+    if (isNaN(num) || num < 0) {
+        document.getElementById("res23").innerHTML = "Digite um número válido!";
+        return;
+    }
+
+    for (let i = num; i >= 1; i--) {
+        resultado *= i;
+        conta += i;
+
+        if (i > 1) {
+            conta += " × ";
+        }
+    }
+
+    document.getElementById("res23").innerHTML =
+        num + "! = " + conta + " = " + resultado;
+}
+
+
