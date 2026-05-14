@@ -388,5 +388,272 @@ function calcularFatorial() {
     document.getElementById("res23").innerHTML =
         num + "! = " + conta + " = " + resultado;
 }
+//26
+function validarEmail() {
 
+    let email =
+    document.getElementById("email").value;
 
+    if(email.includes("@")) {
+
+        document.getElementById("res24").innerHTML =
+        "Email válido!";
+
+    } else {
+
+        document.getElementById("res24").innerHTML =
+        "Email inválido!";
+    }
+}
+
+//27
+function calcularMediaIdades() {
+
+    let idade1 = Number(document.getElementById("idade1").value);
+    let idade2 = Number(document.getElementById("idade2").value);
+    let idade3 = Number(document.getElementById("idade3").value);
+    let idade4 = Number(document.getElementById("idade4").value);
+    let idade5 = Number(document.getElementById("idade5").value);
+
+    let media =
+    (idade1 + idade2 + idade3 + idade4 + idade5) / 5;
+
+    document.getElementById("res25").innerHTML =
+    "Média das idades: " + media;
+}
+
+//28
+function mostrarNomes() {
+
+    let nomes = [
+        "Larah",
+        "Murilo",
+        "Giovana",
+        "Milene",
+        "Yasmin"
+    ];
+
+    let texto = "";
+
+    for(let i = 0; i < nomes.length; i++) {
+
+        texto += nomes[i] + "<br>";
+    }
+
+    document.getElementById("res26").innerHTML =
+    texto;
+}
+
+//29
+function maiorNumero() {
+
+    let numeros = [
+
+        Number(document.getElementById("a").value),
+        Number(document.getElementById("b").value),
+        Number(document.getElementById("c").value),
+        Number(document.getElementById("d").value),
+        Number(document.getElementById("e").value),
+        Number(document.getElementById("f").value),
+        Number(document.getElementById("g").value),
+        Number(document.getElementById("h").value),
+        Number(document.getElementById("i").value),
+        Number(document.getElementById("j").value)
+    ];
+
+    let maior = numeros[0];
+
+    for(let i = 1; i < numeros.length; i++) {
+
+        if(numeros[i] > maior) {
+            maior = numeros[i];
+        }
+    }
+
+    document.getElementById("resultado29").innerHTML =
+    "Maior número: " + maior;
+}
+
+//30
+function inverterOrdem() {
+
+    let numeros = [
+
+        document.getElementById("num1Inverter").value,
+        document.getElementById("num2Inverter").value,
+        document.getElementById("num3Inverter").value,
+        document.getElementById("num4Inverter").value,
+        document.getElementById("num5Inverter").value
+    ];
+
+    numeros.reverse();
+
+    document.getElementById("resultado30").innerHTML =
+    numeros.join(" - ");
+}
+
+//31
+function procurarNome() {
+
+    let nomes = [
+        "Larah",
+        "Murilo",
+        "Giovana",
+        "Milene",
+        "Yasmin"
+    ];
+
+    let nome =
+    document.getElementById("nome").value;
+
+    let encontrado = false;
+
+    for(let i = 0; i < nomes.length; i++) {
+
+        if(nome == nomes[i]) {
+            encontrado = true;
+        }
+    }
+
+    if(encontrado) {
+
+        document.getElementById("resultado31").innerHTML =
+        "Nome encontrado!";
+
+    } else {
+
+        document.getElementById("resultado31").innerHTML =
+        "Nome não encontrado!";
+    }
+}
+
+//32
+function filtrarNotas() {
+
+    let notas = [
+
+        Number(document.getElementById("a1").value),
+        Number(document.getElementById("b1").value),
+        Number(document.getElementById("c1").value),
+        Number(document.getElementById("d1").value),
+        Number(document.getElementById("e1").value),
+        Number(document.getElementById("f1").value),
+        Number(document.getElementById("g1").value),
+        Number(document.getElementById("h1").value),
+        Number(document.getElementById("i1").value),
+        Number(document.getElementById("j1").value)
+    ];
+
+    let acimaMedia = 0;
+
+    for(let i = 0; i < notas.length; i++) {
+
+        if(notas[i] >= 7) {
+            acimaMedia++;
+        }
+    }
+
+    document.getElementById("resultado32").innerHTML =
+    "Notas acima da média: " + acimaMedia;
+}
+
+//33
+function verificarLogin() {
+
+    let usuarios = [
+        "Larah",
+        "Murilo",
+        "Giovana",
+        "Milene",
+        "Yasmin"
+    ];
+
+    let login =
+    document.getElementById("login").value;
+
+    let acesso = false;
+
+    for(let i = 0; i < usuarios.length; i++) {
+
+        if(login == usuarios[i]) {
+            acesso = true;
+        }
+    }
+
+    if(acesso) {
+
+        document.getElementById("resultado33").innerHTML =
+        "Acesso Liberado";
+
+    } else {
+
+        document.getElementById("resultado33").innerHTML =
+        "Acesso Negado";
+    }
+}
+//34
+function mediaVendas() {
+
+    let vendas = [
+
+        Number(document.getElementById("mes1").value),
+        Number(document.getElementById("mes2").value),
+        Number(document.getElementById("mes3").value),
+        Number(document.getElementById("mes4").value),
+        Number(document.getElementById("mes5").value),
+        Number(document.getElementById("mes6").value),
+        Number(document.getElementById("mes7").value),
+        Number(document.getElementById("mes8").value),
+        Number(document.getElementById("mes9").value),
+        Number(document.getElementById("mes10").value),
+        Number(document.getElementById("mes11").value),
+        Number(document.getElementById("mes12").value)
+    ];
+
+    let total = 0;
+
+    for(let i = 0; i < vendas.length; i++) {
+
+        total += vendas[i];
+    }
+
+    let media = total / 12;
+
+    document.getElementById("resultado34").innerHTML =
+    "Total vendido: " + total +
+    "<br>Média mensal: " + media;
+}
+
+//35
+function notaFiscal() {
+
+    let nomes_produtos = [
+
+        document.getElementById("produto1").value,
+        document.getElementById("produto2").value,
+        document.getElementById("produto3").value
+    ];
+
+    let precos_produtos = [
+
+        Number(document.getElementById("preco1").value),
+        Number(document.getElementById("preco2").value),
+        Number(document.getElementById("preco3").value)
+    ];
+
+    let total = 0;
+    let nota = "";
+
+    for(let i = 0; i < 3; i++) {
+
+        nota += nomes_produtos[i] +
+        " - R$ " + precos_produtos[i] + "<br>";
+
+        total += precos_produtos[i];
+    }
+
+    nota += "<br>Total Geral: R$ " + total;
+
+    document.getElementById("resultado35").innerHTML =
+    nota;
+}

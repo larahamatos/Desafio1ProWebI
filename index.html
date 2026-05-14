@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Java Script - Primeiros Passos</h1>
     <h2>1 - Saída - alert()</h2>
@@ -15,7 +17,7 @@
     <h2>2 - Saída - document.write()</h2>
     <p>Escrever texto na página</p>
     <button onclick="mostrar()">Clique aqui!</button>
-    
+
     <br>
     <h2>3 - Entrada - prompt()</h2>
     <p>Pede uma informação do usuário</p>
@@ -26,7 +28,7 @@
     <p>Campo de entrada tradicional:</p>
     <input type="text" id="entrada" placeholder="Digite algo...">
     <button onclick="mostrarTexto()">Enviar</button>
-    <div id="res2"  class="resultado"></div>
+    <div id="res2" class="resultado"></div>
     <br>
     <h2>5 - Somar dois valores</h2>
     <p>Calculadora simples</p>
@@ -40,7 +42,7 @@
     <input type="number" id="nt2" placeholder="Nota 2">
     <input type="number" id="nt3" placeholder="Nota 3">
     <button onclick="calcularMedia()">Calcular Média</button>
-    <div id="res4" class="resultado"></div> 
+    <div id="res4" class="resultado"></div>
     <br>
     <h2>7 - Conversão de Dólar</h2>
     <input type="number" id="dolar" placeholder="Valor em Dólar">
@@ -163,7 +165,98 @@
     <button onclick="calcularFatorial()">Calcular</button>
     <div id="res23" class="resultado"></div>
     <br>
-
+    <h2>26 - Validação de Dados</h2>
+    <input type="text" id="email" placeholder="Digite seu email">
+    <button onclick="validarEmail()">Validar</button>
+    <div id="res24" class="resultado"></div>
+    <br>
+    <h2>27 - Média de Idades (Sentinela)</h2>
+    <input type="number" id="idade1" placeholder="Idade 1">
+    <input type="number" id="idade2" placeholder="Idade 2">
+    <input type="number" id="idade3" placeholder="Idade 3">
+    <input type="number" id="idade4" placeholder="Idade 4">
+    <input type="number" id="idade5" placeholder="Idade 5">
+    <button onclick="calcularMediaIdades()">Calcular Média</button>
+    <div id="res25" class="resultado"></div>
+    <br>
+    <h2>28 - Lista de Nomes</h2>
+    <button onclick="mostrarNomes()">Mostrar Nomes</button>
+    <div id="res26" class="resultado"></div>
+    <br>
+    <h2>29 - Maior Valor no Array</h2>
+    <input type="number" id="a" placeholder="Número 7">
+    <input type="number" id="b" placeholder="Número 7">
+    <input type="number" id="c" placeholder="Número 7">
+    <input type="number" id="d" placeholder="Número 7">
+    <input type="number" id="e" placeholder="Número 7">
+    <input type="number" id="f" placeholder="Número 7">
+    <input type="number" id="g" placeholder="Número 7">
+    <input type="number" id="h" placeholder="Número 8">
+    <input type="number" id="i" placeholder="Número 9">
+    <input type="number" id="j" placeholder="Número 10">
+    <button onclick="maiorNumero()">Ver Maior Número</button>
+    <div id="resultado29"></div>
+    <br>
+    <h2>30 - Inversor de Ordem</h2>
+    <input type="number" id="num1Inverter" placeholder="Número 1">
+    <input type="number" id="num2Inverter" placeholder="Número 2">
+    <input type="number" id="num3Inverter" placeholder="Número 3">
+    <input type="number" id="num4Inverter" placeholder="Número 4">
+    <input type="number" id="num5Inverter" placeholder="Número 5">
+    <button onclick="inverterOrdem()">Inverter Ordem</button>
+    <div id="resultado30"></div>
+    <br>
+    <h2>31 - Localizador de Nomes</h2>
+    <input type="text" id="nome" placeholder="Digite um nome">
+    <button onclick="procurarNome()">Procurar</button>
+    <div id="resultado31"></div>
+    <br>
+    <h2>32 - Filtro de Notas</h2>
+    <input type="number" id="a1" placeholder="Nota 1">
+    <input type="number" id="b1" placeholder="Nota 2">
+    <input type="number" id="c1" placeholder="Nota 3">
+    <input type="number" id="d1" placeholder="Nota 4">
+    <input type="number" id="e1" placeholder="Nota 5">
+    <input type="number" id="f1" placeholder="Nota 6">
+    <input type="number" id="g1" placeholder="Nota 7">
+    <input type="number" id="h1" placeholder="Nota 8">
+    <input type="number" id="i1" placeholder="Nota 9">
+    <input type="number" id="j1" placeholder="Nota 10">
+    <button onclick="filtrarNotas()">Filtrar Notas</button>
+    <div id="resultado32"></div>
+    <br>
+    <h2>33 - Login de Acesso</h2>
+    <input type="text" id="login" placeholder="Digite seu usuário">
+    <button onclick="verificarLogin()">Entrar</button>
+    <div id="resultado33"></div>
+    <br>
+    <h2>34 - Média de Vendas Mensais</h2>
+    <input type="number" id="mes1" placeholder="Janeiro">
+    <input type="number" id="mes2" placeholder="Fevereiro">
+    <input type="number" id="mes3" placeholder="Março">
+    <input type="number" id="mes4" placeholder="Abril">
+    <input type="number" id="mes5" placeholder="Maio">
+    <input type="number" id="mes6" placeholder="Junho">
+    <input type="number" id="mes7" placeholder="Julho">
+    <input type="number" id="mes8" placeholder="Agosto">
+    <input type="number" id="mes9" placeholder="Setembro">
+    <input type="number" id="mes10" placeholder="Outubro">
+    <input type="number" id="mes11" placeholder="Novembro">
+    <input type="number" id="mes12" placeholder="Dezembro">
+    <button onclick="mediaVendas()">Calcular</button>
+    <div id="resultado34"></div>
+    <br>
+    <h2>35 - Carrinho de Compras Simples</h2>
+    <input type="text" id="produto1" placeholder="Produto 1">
+    <input type="number" id="preco1" placeholder="Preço 1">
+    <input type="text" id="produto2" placeholder="Produto 2">
+    <input type="number" id="preco2" placeholder="Preço 2">
+    <input type="text" id="produto3" placeholder="Produto 3">
+    <input type="number" id="preco3" placeholder="Preço 3">
+    <button onclick="notaFiscal()">Gerar Nota</button>
+    <div id="resultado35"></div>
+    <br>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
